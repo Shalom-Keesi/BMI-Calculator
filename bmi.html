@@ -12,7 +12,31 @@
         <div class="overlay"></div>
     <div class="container">
     <div class="logo"><img src="images/BMI logo.png" alt="logo" width="150px" ></div>
-    <h1>BMI Calculator</h1>   
+    <h1>BMI Calculator</h1> 
+    <div class="bmi-container">
+			<form id="bmi-form">
+				<div class="input_Text">
+					<label for="weight"><b>Weight:</b></label>
+					<input type="text" class="number" required>
+					<select id="weight-unit">
+						<option value="kg" class="option">kg</option>
+						<option value="pounds" class="option">pounds</option>
+					   </select>
+				      </div>
+				     <div class="input-text">
+					<label for="text"><b>Height:</b></label>
+					<input type="text" class="number" required>
+					<select id="height-unit">
+					<option value="cm" class="option">cm</option>
+					 <option value="inches" class="option">inches</option>
+					</select>	
+				   </div>
+                 <div class="buttons">
+	<div class="submit_button"><button class="button" onclick="calculateBMI()">SUBMIT</button></div>
+	<div class="reset_button"><button type="button"onclick="editBMI()">RESET</button></div>
+              </div>
+	        </form>
+    </div>
 </div>
 </div>
 

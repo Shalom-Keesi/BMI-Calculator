@@ -3,7 +3,7 @@
     height: 95vh;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .overlay{
     position: absolute;
@@ -23,7 +23,7 @@
     margin-top: 1.5%; 
     position: absolute;
     z-index: 2;
-    display: flex;
+    /* display: flex; */
     gap: 100px;
 
  }
@@ -69,6 +69,8 @@ h2{
 }
 body{
     background-color: #C2E0CC;
+        font-family: monospace;
+
 }
 button{
     
@@ -92,3 +94,112 @@ a{
  
 
 }
+
+.bmi-container{
+    margin-left:140px;
+    margin-bottom:180px ;
+    
+    align-items: center;
+    
+    
+    }
+   
+    .input-text input{
+    width:200px;
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    margin-top:0px;
+    font-size: 20px;
+    border-color:white;
+    
+    
+    }
+    label{
+        font-size: 20px;
+        font-family: monospace;
+
+    }
+.number{
+    font-size: 20px;
+    font-family: monospace;
+
+
+}
+
+
+    .input_Text input{
+      width:200px;
+      height: 60px;
+      border-radius: 15px;
+      border: none;
+    }
+    
+    .input-text select{
+      width:150px;
+      height: 60px;
+      border-radius: 15px;
+      border: none;
+      text-align: center;
+      margin-left:40px;
+      font-size: 18px;
+      font-family: monospace;
+
+    
+    
+    
+    }
+    .input_Text select{
+      width:150px;
+      height: 60px;
+      border-radius: 15px;
+      border: none;
+      text-align: center;
+      margin-left: 40px;
+      font-size: 18px;
+      font-family: monospace;
+
+
+    }
+    .btn{
+      width:200px;
+      height: 60px;
+      border-radius: 15px;
+      border: none;
+    
+    }
+    .buttons{
+    display: flex;
+    gap: 0px;
+
+    }
+    .submit_button button{
+      width:150px;
+      height: 60px;
+      border-radius: 15px;
+      border: none;
+      margin-top:0px;
+      margin-left:120px;
+    background-color: green;
+    color: white;
+    font-family: monospace;
+
+    }
+    .reset_button button{
+      width:150px;
+      height: 60px;
+      margin-left: 72px;
+      border-radius: 15px;
+      border: none;
+      margin-top: 0px;
+    background-color: crimson;
+    color: white;
+    font-family: monospace;
+
+    }
+    form{
+display: flex;
+flex-direction: column;
+gap: 40px;
+
+    }
