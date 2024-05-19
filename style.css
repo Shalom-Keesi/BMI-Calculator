@@ -199,13 +199,11 @@ a{
 
     }
     form{
-display: flex;
-flex-direction: column;
-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
     }
-
-    /* terry */
 
     :root {
         --underweight: orange;
