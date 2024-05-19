@@ -48,7 +48,7 @@
     
     object-fit:contain;
 }
-
+/* Landing page */
 .landing-page{
     display: flex;
     justify-content: space-around;
@@ -76,16 +76,7 @@ body{
         font-family: monospace;
 
 }
-button{
-    
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    border: none;
-    background-color: #C2E0CC;
-    
-   
-}
+
 a{
     text-decoration: none;
     background-color: rgb(99,130,149);
@@ -98,6 +89,8 @@ a{
  
 
 }
+
+/* BMI UI */
 
 .bmi-container{
     margin-left:140px;
@@ -277,3 +270,149 @@ gap: 10px;
         font-size: medium;
         text-align: center;
     }
+
+    @media screen and (min-width:280px) and (max-width:1024px){
+        .landing-page{
+            flex-wrap: wrap;
+        }
+        
+        .BMI{
+            width: 270px;
+            height: 180px;
+        }
+        .logo-landing-page{
+            margin-left: 5%;
+            margin-top: 2%;
+            width: 75px;
+        }
+        
+
+        h2{
+             font-size: 40px;
+        } 
+
+        a{
+         text-decoration: none;
+         margin-left: 15%;
+        }
+/* BMI USER INTERFACE */
+    .body{ 
+    height: 95vh;
+    flex-wrap: wrap;
+    }
+
+    .container{
+        height: 650px;
+        width: 400px;
+    }
+
+    .background-image{
+        width: 50%;
+        height: 50%;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+    .header{
+        flex-wrap: wrap;
+        /* width: 150px; */
+    }
+
+    .bmi-container{
+        margin-left:70px;
+        margin-top: 10px;
+        }
+
+        .input-text input{
+            width:100px;
+            height: 30px;
+            margin-top:0px;
+            font-size: 10px;
+        }
+
+        label{
+            font-size: 10px;
+        }
+
+        .number{
+            font-size: 10px;
+        }
+
+        .input_Text input{
+            width:100px;
+            height: 30px;
+          }
+        
+
+          .input_Text select{
+            width: 75px;
+            height: 30px;
+            margin-left: 20px;
+            font-size: 9px;
+          }
+
+          .input-text select{
+            width:75px;
+            height: 30px;
+            margin-left:5px;
+            font-size: 9px;
+           }
+
+           .btn{
+            width:100px;
+            height: 30px;
+          }
+
+          .buttons{
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .submit_button button{
+            width:75px;
+            height: 30px;
+            margin-left:60px;
+          }
+        
+          .reset_button button{
+            width:75px;
+            height: 30px;
+            margin-left: 36px;
+         }
+
+         form{
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .output #bmi {
+            font-size: 2rem;
+          }
+        
+
+
+    .bmi-scale {
+        flex-wrap: wrap;
+        width: 300px;
+        margin-left: 55px;
+        margin-top: 10px;
+    }
+
+    .bmi-scale h4 {
+        font-size: 0.35rem;
+    }
+    
+    h3{
+        font-size: 11px;
+    }
+     
+    #desc{
+        font-size: 13px;
+    }
+    ::placeholder{
+        font-size: xx-small;
+    }
+
+    }
+       
