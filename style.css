@@ -35,16 +35,20 @@
 }
 
  
- h1{
+ .title{
     font-size: 60px;
     text-align: center;
-    
+    font-weight: bold;
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
 }
 .logo{
-    margin-top: 4%;
-    margin-left: 5%;
+    
+    object-fit:contain;
 }
-/* landing page */
+
 .landing-page{
     display: flex;
     justify-content: space-around;
@@ -97,11 +101,8 @@ a{
 
 .bmi-container{
     margin-left:140px;
-    margin-bottom:180px ;
-    
     align-items: center;
-    
-    
+    margin-top: 15px;
     }
    
     .input-text input{
@@ -170,7 +171,7 @@ a{
     }
     .buttons{
     display: flex;
-    gap: 0px;
+    margin-top: 15px;
 
     }
     .submit_button button{
@@ -200,6 +201,79 @@ a{
     form{
 display: flex;
 flex-direction: column;
-gap: 40px;
+gap: 10px;
 
+    }
+
+    /* terry */
+
+    :root {
+        --underweight: orange;
+        --normal: green;
+        --overweight: lightcoral;
+        --obese: crimson;
+    
+    }
+    
+    .output{
+        text-align: center;
+        margin-top: 55px;
+    
+    }
+    
+    .output #bmi {
+      font-size: 4rem;
+    }
+    
+    .output #desc strong {
+        text-transform: uppercase;
+    }
+    
+    .bmi-scale {
+        display: flex;
+        width: 600px;
+        margin-left: 110px;
+        margin-top: 20px;
+        
+    
+    }
+    
+    .bmi-scale div {
+        flex: 1;
+        text-align: center;
+        text-transform: uppercase;
+        border-top: 5px solid var(--color);
+        padding: 10px;
+    }
+    
+    .bmi-scale h4 {
+        font-size: 0.75rem;
+        color: slategray;
+    
+    }
+    
+    .underweight{
+        color: var(--underweight);
+    }
+    
+    .healthy{
+        color: var(--normal)
+    }
+    
+    .overweight{
+        color: var(--overweight);
+    }
+    
+    .obese{
+        color: var(--obese);
+    }
+    h3{
+        font-size: 21px;
+    }
+    #desc{
+        font-size: 21px;
+    }
+    ::placeholder{
+        font-size: medium;
+        text-align: center;
     }
