@@ -1,46 +1,65 @@
-const bmiText= document.getElementById('bmi');
-const descText = document.getElementById('desc');
-const form = document.querySelector('form');
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('bmi-form');
+    const weightInput = document.querySelector('#bmi-form input[name="weight"]');
+    const heightInput = document.querySelector('#bmi-form input[name="height"]');
+    const weightUnit = document.getElementById('weightUnit');
+    const heightUnit = document.getElementById('heightUnit');
+    const bmiOutput = document.getElementById('bmi');
+    const descOutput = document.getElementById('desc');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        console.log('form submitted');
+        let weight = parseFloat(weightInput.value);
+        let height = parseFloat(heightInput.value);
+        console.log('Parsed Weight:', weight);
+        console.log('Parsed Height:', height);
+        
+        if (weightUnit.value === 'pounds') {
+            weight *= 0.453592; 
+        }
+        
+        if (heightUnit.value === 'inches') {
+            console.log('height unit is inches');
+            height *= 0.0254; 
+        } else if (heightUnit.value === 'cm') {
+            console.log('height unit is cm');
+            height /= 100; 
+        }
+        else{
+            console.log('height is in meters');
+        }
+        console.log('height after covertion',height);
+        console.log('Converted Weight:', weight);
+        console.log('Converted Height:', height);
 
+        console.log('weight(kg)',weight);
+        console.log('height(m)',height);
 
-form.addEventListener('submit',onFormSubmit)
+        let bmi = weight / (height * height);
 
-function onFormSubmit(e){
-    e.preventDefault();
+        console.log('BMI:', bmi);
 
-    const weight = parseFloat(form.weight.value);
-    const height = parseFloat(form.height.value);
+        bmiOutput.textContent = bmi.toFixed(1);
+        if (bmi < 18.5) {
+            descOutput.textContent = 'You are underweight';
+            bmiOutput.className= 'underweight';
+        } else if (bmi >= 18.5 && bmi < 25) {
+            descOutput.textContent = 'You are healthy';
+            bmiOutput.className= 'healthy';
+        } else if (bmi >= 25 && bmi < 30) {
+            descOutput.textContent = 'You are overweight';
+            bmiOutput.className= 'overweight';
+        } else {
+            descOutput.textContent = 'You are obese';
+            bmiOutput.className= 'obese';
+        }
+    });
+    document.querySelector('.reset_button button').addEventListener('click', function() {
+        console.log('reset button clicked');
+        form.reset();
+        bmiOutput.textContent = '0';
+        descOutput.textContent = 'N/A';
+        bmiOutput.className = ''
+    });
+});
 
-
-    if(isNaN(weight) || isNaN(height) || weight <=0 || height <=0){
-        alert('Please enter a valid weight and height')
-        return;
-    }
-    // const heightInMeters= height/100;
-    // const bmi = weight / Math.pow(heightInMeters,2);
-
-    let heightInMeters;
-    let weightInKg;
-
-    if(heightUnit==='cm'){
-        heightInMeters=height/100;
-    }
-    else{
-        heightInMeters= height* 0.0254
-    }
-
-    if( weightUnit==='kg'){
-        weightInKg=weight;
-    }
-    else{
-        weightInKg=weight*0.453592;
-    }
-
-
-    const bmi= weightInKg/(heightInMeters*heightInMeters);
-    const result = document.getElementById('result');
-
-    result.textContent= bmi.toFixed(2);
-    //result.textContent = `Your BMI is ${bmi.toFixed(2)}`;
-
-}
