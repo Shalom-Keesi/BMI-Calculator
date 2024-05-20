@@ -13,17 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
         let height = parseFloat(heightInput.value);
         console.log('Parsed Weight:', weight);
         console.log('Parsed Height:', height);
-        // Convert weight to kilograms if input is in pounds
+        
         if (weightUnit.value === 'pounds') {
-            weight *= 0.453592; // 1 pound = 0.453592 kilograms
+            weight *= 0.453592; 
         }
-        // Convert height to meters
+        
         if (heightUnit.value === 'inches') {
             console.log('height unit is inches');
-            height *= 0.0254; // 1 inch = 0.0254 meters
+            height *= 0.0254; 
         } else if (heightUnit.value === 'cm') {
             console.log('height unit is cm');
-            height /= 100; // 1 meter = 100 centimeters
+            height /= 100; 
         }
         else{
             console.log('height is in meters');
