@@ -91,10 +91,11 @@ a{
     background-color: rgb(99,130,149);
     margin-left: 30%;
     border: solid 1px rgb(99,130,149);
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 25px;
+    padding: 20px;
     color: white;
     font-weight: bolder;
+    font-size: 20px;
  
 
 }
@@ -110,7 +111,7 @@ a{
     height: 60px;
     border-radius: 15px;
     border: none;
-    margin-top:0px;
+    padding: 5px;
     font-size: 20px;
     border-color:white;
     
@@ -121,7 +122,7 @@ a{
         font-family: monospace;
 
     }
-.number{
+    .number{
     font-size: 20px;
     font-family: monospace;
 
@@ -134,6 +135,10 @@ a{
       height: 60px;
       border-radius: 15px;
       border: none;
+      text-align: center;
+    }
+    .input-text input{
+        text-align: center;
     }
     
     .input-text select{
